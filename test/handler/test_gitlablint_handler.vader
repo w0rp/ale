@@ -1,0 +1,35 @@
+Before:
+  runtime! ale_linters/yaml/gitlablint.vim
+
+After:
+  Restore
+  call ale#linter#Reset()
+
+Execute(Problems should be parsed correctly for gitlablint):
+  AssertEqual
+  \ [
+  \   {
+  \     'lnum': 0,
+  \     'col': 0,
+  \     'type': 'E',
+  \     'text': 'root config contains unknown keys: efore_script',
+  \   },
+  \   {
+  \     'lnum': 77,
+  \     'col': 3,
+  \     'type': 'E',
+  \     'text': '(<unknown>): could not find expected : while scanning a simple key',
+  \   },
+  \   {
+  \     'lnum': 0,
+  \     'col': 0,
+  \     'type': 'E',
+  \     'text': 'build:dev:rest job: undefined need: chck:dev',
+  \   },
+  \ ],
+  \ ale_linters#yaml#gitlablint#Handle(bufnr(''), [
+  \   'GitLab CI configuration is invalid',
+  \   'root config contains unknown keys: efore_script',
+  \   '(<unknown>): could not find expected : while scanning a simple key at line 77 column 3',
+  \   'build:dev:rest job: undefined need: chck:dev',
+  \ ])

@@ -2648,6 +2648,7 @@ documented in additional help files.
     prettier..............................|ale-yaml-prettier|
     swaglint..............................|ale-yaml-swaglint|
     yamllint..............................|ale-yaml-yamllint|
+    gitlablint............................|ale-yaml-gitlablint|
   yang....................................|ale-yang-options|
     yang-lsp..............................|ale-yang-lsp|
 

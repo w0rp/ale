@@ -500,6 +500,7 @@ Notes:
 * XML
   * `xmllint`
 * YAML
+  * `gitlablint`
   * `prettier`
   * `swaglint`
   * `yamllint`
