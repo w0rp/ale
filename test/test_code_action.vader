@@ -1,4 +1,15 @@
 Before:
+  let g:notified_changes = []
+
+  runtime autoload/ale/lsp.vim
+
+  function! ale#lsp#NotifyForChanges(conn_id, buffer) abort
+    call add(g:notified_changes, {
+    \ 'conn_id': a:conn_id,
+    \ 'buffer': a:buffer
+    \})
+  endfunction
+
   Save g:ale_enabled
   let g:ale_enabled = 0
 
@@ -35,13 +46,27 @@ Before:
   endfunction!
 
 After:
+  let g:expected_notified_changes = []
+
   " Close the extra buffers if we opened it.
-  if bufnr(g:file1) != -1
+  if bufnr(g:file1) != -1 && buflisted(bufnr(g:file1))
+    call add(g:expected_notified_changes, {
+    \ 'conn_id': 'test_conn',
+    \ 'buffer': bufnr(g:file1),
+    \})
+
     execute ':bp! | :bd! ' . bufnr(g:file1)
   endif
-  if bufnr(g:file2) != -1
+  if bufnr(g:file2) != -1 && buflisted(bufnr(g:file2))
+    call add(g:expected_notified_changes, {
+    \ 'conn_id': 'test_conn',
+    \ 'buffer': bufnr(g:file2),
+    \})
+
     execute ':bp! | :bd! ' . bufnr(g:file2)
   endif
+
+  AssertEqual g:expected_notified_changes, g:notified_changes
 
   if filereadable(g:file1)
     call delete(g:file1)
@@ -50,11 +75,15 @@ After:
     call delete(g:file2)
   endif
 
+  unlet! g:notified_changes
+  unlet! g:expected_notified_changes
   unlet! g:file1
   unlet! g:file2
   unlet! g:test
   unlet! g:changes
   delfunction WriteFileAndEdit
+
+  runtime autoload/ale/lsp.vim
 
   Restore
 
@@ -118,7 +147,7 @@ Execute(It should modify and save multiple files):
   \     }]
   \   }],
   \ },
-  \ {'should_save': 1},
+  \ {'should_save': 1, 'conn_id': 'test_conn'},
   \)
 
   AssertEqual [
@@ -139,7 +168,6 @@ Execute(It should modify and save multiple files):
   \ 'import D from "D"',
   \ '',
   \], readfile(g:file2, 'b')
-
 
 Execute(Beginning of file can be modified):
   let g:test.text = [
@@ -166,7 +194,7 @@ Execute(Beginning of file can be modified):
   \      }],
   \   }]
   \ },
-  \ {'should_save': 1},
+  \ {'should_save': 1, 'conn_id': 'test_conn'},
   \)
 
   AssertEqual [
@@ -200,7 +228,7 @@ Execute(End of file can be modified):
   \     }],
   \   }]
   \ },
-  \ {'should_save': 1},
+  \ {'should_save': 1, 'conn_id': 'test_conn'},
   \)
 
   AssertEqual g:test.text + [
@@ -238,7 +266,7 @@ Execute(Current buffer contents will be reloaded):
   \      }],
   \   }]
   \ },
-  \ {'should_save': 1},
+  \ {'should_save': 1, 'conn_id': 'test_conn'},
   \)
 
   AssertEqual [
@@ -252,6 +280,45 @@ Execute(Current buffer contents will be reloaded):
   \] + g:test.text, getbufline(g:test.buffer, 1, '$')
 
 
+Execute(Unlisted buffer contents will be modified correctly):
+  let g:test.text = [
+  \ 'class Name {',
+  \ '  value: string',
+  \ '}',
+  \]
+  call writefile(g:test.text, g:file1, 'S')
+
+  execute 'edit ' . g:file1
+  let g:test.buffer = bufnr(g:file1)
+
+  execute 'bd'
+  AssertEqual bufnr(g:file1), g:test.buffer
+
+  call ale#code_action#HandleCodeAction(
+  \ {
+  \   'changes': [{
+  \      'fileName': g:file1,
+  \      'textChanges': [{
+  \        'start': {
+  \          'line': 1,
+  \          'offset': 1,
+  \        },
+  \        'end': {
+  \          'line': 1,
+  \          'offset': 1,
+  \        },
+  \        'newText': "type A: string\ntype B: number\n",
+  \      }],
+  \   }]
+  \ },
+  \ {'should_save': 1, 'conn_id': 'test_conn'},
+  \)
+
+  AssertEqual [
+  \  'type A: string',
+  \  'type B: number',
+  \] + g:test.text + [''], readfile(g:file1, 'b')
+
 # Tests for cursor repositioning. In comments `=` designates change range, and
 # `C` cursor position
 
@@ -261,11 +328,20 @@ Execute(Cursor will not move when it is before text change):
   let g:test.changes = g:test.create_change(2, 3, 2, 8, 'value2')
 
   call setpos('.', [0, 1, 1, 0])
-  call ale#code_action#HandleCodeAction(g:test.changes, {'should_save': 1})
+  call ale#code_action#HandleCodeAction(g:test.changes, {
+  \ 'should_save': 1,
+  \ 'conn_id': 'test_conn',
+  \})
   AssertEqual [1, 1], getpos('.')[1:2]
 
+  " make tests at the end work
+  let g:notified_changes = []
+
   call setpos('.', [0, 2, 2, 0])
-  call ale#code_action#HandleCodeAction(g:test.changes, {'should_save': 1})
+  call ale#code_action#HandleCodeAction(g:test.changes, {
+  \ 'should_save': 1,
+  \ 'conn_id': 'test_conn',
+  \})
   AssertEqual [2, 2], getpos('.')[1:2]
 
 # ====C====
@@ -273,10 +349,16 @@ Execute(Cursor column will move to the change end when cursor between start/end)
   let g:test.changes = g:test.create_change(2, 3, 2, 8, 'value2')
 
   for r in range(3, 8)
+    " make tests at the end work
+    let g:notified_changes = []
+
     call WriteFileAndEdit()
     call setpos('.', [0, 2, r, 0])
     AssertEqual '  value: string', getline('.')
-    call ale#code_action#HandleCodeAction(g:test.changes, {'should_save': 1})
+    call ale#code_action#HandleCodeAction(g:test.changes, {
+    \ 'should_save': 1,
+    \ 'conn_id': 'test_conn',
+    \})
     AssertEqual '  value2: string', getline('.')
     AssertEqual [2, 9], getpos('.')[1:2]
   endfor
@@ -289,8 +371,10 @@ Execute(Cursor column will move back when new text is shorter):
   AssertEqual '  value: string', getline('.')
   call ale#code_action#HandleCodeAction(
   \ g:test.create_change(2, 3, 2, 8, 'val'),
-  \ {'should_save': 1},
-  \)
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '  val: string', getline('.')
   AssertEqual [2, 6], getpos('.')[1:2]
 
@@ -302,7 +386,11 @@ Execute(Cursor column will move forward when new text is longer):
   call setpos('.', [0, 2, 8, 0])
   AssertEqual '  value: string', getline('.')
   call ale#code_action#HandleCodeAction(
-  \ g:test.create_change(2, 3, 2, 8, 'longValue'), {'should_save': 1})
+  \ g:test.create_change(2, 3, 2, 8, 'longValue'),
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '  longValue: string', getline('.')
   AssertEqual [2, 12], getpos('.')[1:2]
 
@@ -314,7 +402,11 @@ Execute(Cursor line will move when updates are happening on lines above):
   call setpos('.', [0, 3, 1, 0])
   AssertEqual '}', getline('.')
   call ale#code_action#HandleCodeAction(
-  \ g:test.create_change(1, 1, 2, 1, "test\ntest\n"), {'should_save': 1})
+  \ g:test.create_change(1, 1, 2, 1, "test\ntest\n"),
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '}', getline('.')
   AssertEqual [4, 1], getpos('.')[1:2]
 
@@ -326,7 +418,11 @@ Execute(Cursor line and column will move when change on lines above and just bef
   call setpos('.', [0, 2, 2, 0])
   AssertEqual '  value: string', getline('.')
   call ale#code_action#HandleCodeAction(
-  \ g:test.create_change(1, 1, 2, 1, "test\ntest\n123"), {'should_save': 1})
+  \ g:test.create_change(1, 1, 2, 1, "test\ntest\n123"),
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '123  value: string', getline('.')
   AssertEqual [3, 5], getpos('.')[1:2]
 
@@ -338,7 +434,11 @@ Execute(Cursor line and column will move at the end of changes):
   call setpos('.', [0, 2, 10, 0])
   AssertEqual '  value: string', getline('.')
   call ale#code_action#HandleCodeAction(
-  \ g:test.create_change(1, 1, 3, 1, "test\n"), {'should_save': 1})
+  \ g:test.create_change(1, 1, 3, 1, "test\n"),
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '}', getline('.')
   AssertEqual [2, 1], getpos('.')[1:2]
 
@@ -349,7 +449,11 @@ Execute(Cursor will not move when changes happening on lines >= cursor, but afte
   call setpos('.', [0, 2, 3, 0])
   AssertEqual '  value: string', getline('.')
   call ale#code_action#HandleCodeAction(
-  \ g:test.create_change(2, 10, 3, 1, "number\n"), {'should_save': 1})
+  \ g:test.create_change(2, 10, 3, 1, "number\n"),
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual '  value: number', getline('.')
   AssertEqual [2, 3], getpos('.')[1:2]
 
@@ -359,13 +463,18 @@ Execute(Cursor will not move when change covers entire file):
   call ale#code_action#HandleCodeAction(
   \ g:test.create_change(1, 1, len(g:test.text) + 1, 1,
   \   join(g:test.text + ['x'], "\n")),
-  \ {'should_save': 1})
+  \ {
+  \   'should_save': 1,
+  \   'conn_id': 'test_conn',
+  \ })
   AssertEqual [2, 3], getpos('.')[1:2]
 
 Execute(It should just modify file when should_save is set to v:false):
   call WriteFileAndEdit()
   let g:test.change = g:test.create_change(1, 1, 1, 1, "import { writeFile } from 'fs';\n")
-  call ale#code_action#HandleCodeAction(g:test.change, {})
+  call ale#code_action#HandleCodeAction(g:test.change, {
+  \ 'conn_id': 'test_conn',
+  \})
   AssertEqual 1, getbufvar(bufnr(''), '&modified')
   AssertEqual [
   \ 'import { writeFile } from ''fs'';',
@@ -393,7 +502,16 @@ Execute():
   \ {'end': {'offset': 14, 'line': 9}, 'newText': 'foo', 'start': {'offset': 3, 'line': 9}},
   \]
 
-  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, 0)
+  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, {
+  \ 'conn_id': 'test_conn',
+  \})
+
+  AssertEqual [{
+  \ 'conn_id': 'test_conn',
+  \ 'buffer': bufnr(''),
+  \}], g:notified_changes
+
+  let g:notified_changes = []
 
 Expect(The changes should be applied correctly):
   type Foo = {}

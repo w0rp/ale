@@ -59,7 +59,7 @@ Before:
 
   function! ale#code_action#HandleCodeAction(code_action, options) abort
     let g:handle_code_action_called = 1
-    Assert get(a:options, 'should_save')
+    AssertEqual 0, get(a:options, 'should_save', 0)
     call add(g:code_actions, a:code_action)
   endfunction
 

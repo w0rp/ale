@@ -10,7 +10,7 @@ Execute():
   \ {'end': {'offset': 15, 'line': 3}, 'newText': "    return c\n\n\ndef main():\n    c = func_qtffgsvi()\n", 'start': {'offset': 15, 'line': 3}}
   \]
 
-  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, 0)
+  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, {})
 
 Expect(The changes should be applied correctly):
   def func_qtffgsvi():
@@ -40,7 +40,7 @@ Execute():
   \ {'end': {'offset': 42, 'line': 8}, 'newText': "ivlpdpao(f)\n", 'start': {'offset': 33, 'line': 6}}
   \]
 
-  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, 0)
+  call ale#code_action#ApplyChanges(expand('%:p'), g:changes, {})
 
 Expect(The changes should be applied correctly):
   import sys
