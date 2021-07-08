@@ -490,6 +490,18 @@ function! s:RemoveProblemsForDisabledLinters(buffer, linters) abort
     \)
 endfunction
 
+function! s:HasProblemFromOtherSources(buffer) abort
+    let l:loclist = get(g:ale_buffer_info[a:buffer], 'loclist', [])
+
+    for l:item in l:loclist
+        if has_key(l:item, 'from_other_source') && l:item.from_other_source
+            return 1
+        endif
+    endfor
+
+    return 0
+endfunction
+
 function! s:AddProblemsFromOtherBuffers(buffer, linters) abort
     let l:filename = expand('#' . a:buffer . ':p')
     let l:loclist = []
@@ -645,8 +657,10 @@ function! s:RunLinters(
     call s:StopCurrentJobs(a:buffer, a:should_lint_file, a:slots)
     call s:RemoveProblemsForDisabledLinters(a:buffer, a:linters)
 
+    let l:has_other_source = s:HasProblemFromOtherSources(a:buffer)
+
     " We can only clear the results if we aren't checking the buffer.
-    let l:can_clear_results = !ale#engine#IsCheckingBuffer(a:buffer)
+    let l:can_clear_results = !ale#engine#IsCheckingBuffer(a:buffer) && !l:has_other_source
 
     silent doautocmd <nomodeline> User ALELintPre
 
