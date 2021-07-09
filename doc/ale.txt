@@ -2966,6 +2966,8 @@ documented in additional help files.
   restructuredtext........................|ale-restructuredtext-options|
     textlint..............................|ale-restructuredtext-textlint|
     write-good............................|ale-restructuredtext-write-good|
+  robot...................................|ale-robot-options|
+    rflint................................|ale-robot-rflint|
   ruby....................................|ale-ruby-options|
     brakeman..............................|ale-ruby-brakeman|
     debride...............................|ale-ruby-debride|

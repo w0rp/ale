@@ -451,6 +451,8 @@ formatting.
   * [textlint](https://textlint.github.io/)
   * [vale](https://github.com/ValeLint/vale)
   * [write-good](https://github.com/btford/write-good)
+* Robot
+  * [rflint](https://github.com/boakley/robotframework-lint)
 * RPM spec
   * [rpmlint](https://github.com/rpm-software-management/rpmlint) :warning: (see `:help ale-integration-spec`)
 * Ruby
