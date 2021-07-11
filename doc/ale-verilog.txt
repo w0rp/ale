@@ -3,13 +3,16 @@ ALE Verilog/SystemVerilog Integration                     *ale-verilog-options*
 
 
 ===============================================================================
-ALE can use five different linters for Verilog HDL:
+ALE can use six different linters for Verilog HDL:
 
   HDL Checker
     Using `hdl_checker --lsp`
 
   iverilog:
     Using `iverilog -t null -Wall`
+
+  verible:
+    Using `verible-verilog-lint`
 
   verilator
     Using `verilator --lint-only -Wall`
@@ -61,6 +64,19 @@ iverilog                                                 *ale-verilog-iverilog*
 
   No additional options
 
+
+===============================================================================
+verible                                                   *ale-verilog-verible*
+
+g:ale_verilog_verible_options                   *g:ale_verilog_verible_options*
+                                                *b:ale_verilog_verible_options*
+  Type: |String|
+  Default: `''`
+
+  This variable can be changed to modify '>>verible-verilog-lint' command arguments
+
+  Check all the options at verible's github page:
+  https://github.com/google/verible/tree/master/verilog/tools/lint
 
 ===============================================================================
 verilator                                               *ale-verilog-verilator*

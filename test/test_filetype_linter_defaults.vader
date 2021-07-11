@@ -61,7 +61,7 @@ Execute(The defaults for the zsh filetype should be correct):
 Execute(The defaults for the verilog filetype should be correct):
   " This filetype isn't configured with default, so we can test loading all
   " available linters with this.
-  AssertEqual ['hdl-checker', 'iverilog', 'verilator', 'vlog', 'xvlog'], GetLinterNames('verilog')
+  AssertEqual ['hdl-checker', 'iverilog', 'verible', 'verilator', 'vlog', 'xvlog'], GetLinterNames('verilog')
 
   let g:ale_linters_explicit = 1
 
