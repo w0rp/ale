@@ -212,6 +212,23 @@ function! ale#list#SetLists(buffer, loclist) abort
     endif
 endfunction
 
+function! ale#list#ForcePopulateErrorList(populate_quickfix) abort
+    let l:quickfix_bak = g:ale_set_quickfix
+    let g:ale_set_quickfix = a:populate_quickfix
+    let l:loclist_bak = g:ale_set_loclist
+    let g:ale_set_loclist = !a:populate_quickfix
+    let l:open_list_bak = g:ale_open_list
+    let g:ale_open_list = 1
+
+    let l:buffer = bufnr('')
+    let l:loclist = get(g:ale_buffer_info, l:buffer, {'loclist': []}).loclist
+    call s:SetListsImpl(-1, l:buffer, l:loclist)
+
+    let g:ale_open_list = l:open_list_bak
+    let g:ale_set_loclist = l:loclist_bak
+    let g:ale_set_quickfix = l:quickfix_bak
+endfunction
+
 function! s:CloseWindowIfNeeded(buffer) abort
     if ale#Var(a:buffer, 'keep_list_window_open') || !s:ShouldOpen(a:buffer)
         return

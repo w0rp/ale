@@ -222,6 +222,10 @@ command! -bar ALELint :call ale#Queue(0, 'lint_file')
 " Stop current jobs when linting.
 command! -bar ALELintStop :call ale#engine#Stop(bufnr(''))
 
+" Commands to manually populate the quickfixes.
+command! -bar ALEPopulateQuickfix :call ale#list#ForcePopulateErrorList(1)
+command! -bar ALEPopulateLocList  :call ale#list#ForcePopulateErrorList(0)
+
 " Define a command to get information about current filetype.
 command! -bar ALEInfo :call ale#debugging#Info()
 " The same, but copy output to your clipboard.
