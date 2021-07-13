@@ -71,3 +71,6 @@ Execute(ale#path#ToURI should handle UTF-8):
 
 Execute(ale#path#FromURI should handle UTF-8):
   AssertEqual '/Téléchargement', ale#path#FromURI('file:///T%C3%A9l%C3%A9chargement')
+
+Execute(ale#path#FromURI should work for jar file):
+  AssertEqual 'zipfile:/foo.jar::bar/baz.java', ale#path#FromURI('jar:file:///foo.jar!/bar/baz.java')

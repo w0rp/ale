@@ -234,6 +234,9 @@ endfunction
 function! ale#path#FromURI(uri) abort
     if a:uri[:6] is? 'file://'
         let l:encoded_path = a:uri[7:]
+    elseif a:uri[:10] is? 'jar:file://'
+        let l:encoded_path = 'zipfile:' . a:uri[11:]
+        let l:encoded_path = substitute(l:encoded_path, '\([^!]*\)!/\(.*\)', '\1::\2', '')
     elseif a:uri[:4] is? 'file:'
         let l:encoded_path = a:uri[5:]
     else
