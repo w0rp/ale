@@ -146,6 +146,11 @@ let s:default_registry = {
 \       'suggested_filetypes': [],
 \       'description': 'Remove all trailing whitespace characters at the end of every line.',
 \   },
+\   'trim_whitespace_except_double': {
+\       'function': 'ale#fixers#generic#TrimWhitespaceExceptDoubleWhitespace',
+\       'suggested_filetypes': [],
+\       'description': 'Remove all trailing whitespace characters at the end of every line except for a double whitespace.',
+\   },
 \   'yamlfix': {
 \       'function': 'ale#fixers#yamlfix#Fix',
 \       'suggested_filetypes': ['yaml'],

@@ -23,3 +23,16 @@ function! ale#fixers#generic#TrimWhitespace(buffer, lines) abort
 
     return l:lines_new
 endfunction
+
+" Remove all whitespaces at the end of lines except double space
+function! ale#fixers#generic#TrimWhitespaceExceptDoubleWhitespace(buffer, lines) abort
+    let l:index = 0
+    let l:lines_new = range(len(a:lines))
+
+    for l:line in a:lines
+        let l:lines_new[l:index] = substitute(l:line, '\v(\s)@<!\s(\s{2,})?$', '', 'g')
+        let l:index = l:index + 1
+    endfor
+
+    return l:lines_new
+endfunction
