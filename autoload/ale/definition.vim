@@ -78,6 +78,10 @@ function! ale#definition#HandleLSPResponse(conn_id, response) abort
                 let l:column = l:item.range.start.character + 1
             endif
 
+            let l:mappings = ale#GetFilenameMappings(bufnr(''), "elixir-ls")
+            let l:mappings = ale#filename_mapping#Invert(l:mappings)
+            let l:filename = ale#filename_mapping#Map(l:filename, l:mappings)
+
             call ale#definition#UpdateTagStack()
             call ale#util#Open(l:filename, l:line, l:column, l:options)
             break
