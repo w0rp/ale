@@ -1,0 +1,23 @@
+{
+  "name": "clear",
+  "author": "Dave Eddy <dave@daveeddy.com> (http://www.daveeddy.com)",
+  "description": "Clear the terminal screen if possible",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/bahamas10/node-clear.git",
+    "type": "git"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "bin": {},
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "ansi",
+    "clear",
+    "terminal"
+  ]
+}

@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+/**
+ * Find files that match one or more patterns
+ */
+
+var glob = require('..');
+var argv = require('yargs')
+    .usage('Usage: $0 [pattern1..patternN]')
+    .demand(1)
+    .argv;
+
+var patterns = argv._;
+if (patterns.length === 1) { patterns = patterns[0].split('\n'); }
+
+glob.sync(patterns).forEach(function (file) {
+    process.stdout.write(file + '\n');
+});

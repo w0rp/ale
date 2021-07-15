@@ -1,0 +1,25 @@
+{
+	"non-interactive": true,
+	"increment": "minor",
+	"src": {
+		"commitMessage": "🦄 Release %s",
+		"tagAnnotation": "🦄 Release %s"
+	},
+	"npm": {
+		"publish": true
+	},
+	"github": {
+		"release": true,
+		"releaseName": "🦄 %s"
+	},
+	"prompt": {
+		"src": {
+			"status": true,
+			"commit": true,
+			"tag": true,
+			"push": true,
+			"release": true,
+			"publish": true
+		}
+	}
+}

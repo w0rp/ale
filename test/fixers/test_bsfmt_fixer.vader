@@ -1,0 +1,58 @@
+Before:
+  Save g:ale_bsfmt_fixer_executable
+  Save g:ale_bsfmt_fixer_options
+  let g:ale_bsfmt_fixer_executable = ''
+  let g:ale_bsfmt_fixer_options = ''
+
+  call ale#test#SetDirectory('/testplugin/test/fixers')
+
+After:
+  Restore
+
+  call ale#test#RestoreDirectory()
+
+
+Execute(project with bsfmt should use local by default):
+  call ale#test#SetFilename('../test-files/brighterscript/project-with-bsfmt/source/with-errors.brs')
+
+  AssertEqual
+  \ ale#path#Simplify(g:dir . '/../test-files/brighterscript/project-with-bsfmt/node_modules/brighterscript-formatter/dist/cli.js'),
+  \ ale#fixers#bsfmt_fixer#GetExecutable(bufnr(''))
+
+
+Execute(The bsfmt-fixer callback should return the correct default values):
+  call ale#test#SetFilename('../test-files/brighterscript/project-with-bsfmt/source/with-errors.brs')
+
+  AssertEqual
+  \ {
+  \   'read_temporary_file': 1,
+  \   'command': ale#Escape(ale#fixers#bsfmt_fixer#GetExecutable(bufnr('')))
+  \      . ' ' . g:ale_bsfmt_fixer_options
+  \      . ' --write %t'
+  \ },
+  \ ale#fixers#bsfmt_fixer#Fix(bufnr(''))
+
+Execute(The bsfmt-fixer callback should include custom bsfmt-fixer options):
+  let g:ale_bsfmt_fixer_options = '--noBsfmt'
+  call ale#test#SetFilename('../test-files/brighterscript/project-with-bsfmt/source/with-errors.brs')
+
+  AssertEqual
+  \ {
+  \   'command': ale#Escape(ale#fixers#bsfmt_fixer#GetExecutable(bufnr('')))
+  \     . ' --noBsfmt --write %t',
+  \   'read_temporary_file': 1,
+  \ },
+  \ ale#fixers#bsfmt_fixer#Fix(bufnr(''))
+
+--    Execute(The bsfmt-fixer callback should include custom executable):
+--      let g:ale_bsfmt_fixer_executable = 'ls'
+--      let g:ale_bsfmt_fixer_options = '--noBsfmt'
+--      call ale#test#SetFilename('../test-files/brighterscript/project-with-bsfmt/source/with-errors.brs')
+--
+--      AssertEqual
+--      \ {
+--      \   'command': ale#Escape('ls')
+--      \     . ' --noBsfmt --write %t',
+--      \   'read_temporary_file': 1,
+--      \ },
+--      \ ale#fixers#bsfmt_fixer#Fix(bufnr(''))

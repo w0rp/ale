@@ -1,0 +1,403 @@
+{
+  "program": {
+    "fileInfos": {
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
+        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
+        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
+        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts": {
+        "version": "bf170fa7aee80f09f393a5350184a5bb6e2addb0410f6c9e023280d18c7472aa",
+        "signature": "21f9731fc2e8e009fdaef137a04546c27877314c748c6702fe9329518fb16538"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts": {
+        "version": "9fecfa38d5d803f40f5e43b6d251678305cae462985305cbc2f2707ab32e7dfa",
+        "signature": "7514b3fa0996de70bba147262edffd3136aea07e654b60d50defbde16e4fca56"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/edits.test.ts": {
+        "version": "51ba23f23c0999b2ab2cdcc688e8e5c02a991ea73040e843412b3b2148fc8535",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/textdocument.test.ts": {
+        "version": "6340b7c97c8d92c59eeececad5d086ad893eda125d2445ba6637bfaea6d9f05c",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/eslint-visitor-keys/index.d.ts": {
+        "version": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c",
+        "signature": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/json-schema/index.d.ts": {
+        "version": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30",
+        "signature": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/mocha/index.d.ts": {
+        "version": "d93bdd7313bdc64d926cd1429bdb9a979037240e89995fddbc6817075bbfe502",
+        "signature": "d93bdd7313bdc64d926cd1429bdb9a979037240e89995fddbc6817075bbfe502"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts": {
+        "version": "7e49dbf1543b3ee54853ade4c5e9fa460b6a4eca967efe6bf943e0c505d087ed",
+        "signature": "7e49dbf1543b3ee54853ade4c5e9fa460b6a4eca967efe6bf943e0c505d087ed"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts": {
+        "version": "f377ba987daec87eee5f3dcf798bca328f3c24a7da1ad5120382b3cbe222a501",
+        "signature": "f377ba987daec87eee5f3dcf798bca328f3c24a7da1ad5120382b3cbe222a501"
+      },
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "1de0ff6200b92798a5aef43f57029c79dbf69932037dee1c007fdd2c562db258",
+        "signature": "1de0ff6200b92798a5aef43f57029c79dbf69932037dee1c007fdd2c562db258"
+      }
+    },
+    "options": {
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "target": 1,
+      "module": 5,
+      "sourceMap": false,
+      "declaration": true,
+      "stripInternal": true,
+      "lib": [
+        "lib.es2015.d.ts"
+      ],
+      "outDir": "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/lib/esm",
+      "incremental": true,
+      "tsBuildInfoFile": "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/lib/tsconfig.esm.tsbuildInfo",
+      "rootDir": "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src",
+      "configFilePath": "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/tsconfig.esm.json"
+    },
+    "referencedMap": {
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/edits.test.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/textdocument.test.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/json-schema/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/mocha/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/json-schema/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/mocha/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts",
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es5.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/main.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/helper.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/edits.test.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/textDocument/src/test/textdocument.test.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/json-schema/index.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/mocha/index.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/inspector.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/base.d.ts",
+      "/home/aeschli/workspaces/vscode-languageserver-node/node_modules/@types/node/ts3.2/index.d.ts"
+    ]
+  },
+  "version": "3.5.3"
+}

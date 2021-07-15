@@ -1,0 +1,32 @@
+{
+	"name": "vscode-languageserver",
+	"description": "Language server implementation for node",
+	"version": "6.1.1",
+	"author": "Microsoft Corporation",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-languageserver-node.git",
+		"directory": "server"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-languageserver-node/issues"
+	},
+	"main": "./lib/main.js",
+	"bin": {
+		"installServerIntoExtension": "./bin/installServerIntoExtension"
+	},
+	"typings": "./lib/main",
+	"dependencies": {
+		"vscode-languageserver-protocol": "^3.15.3"
+	},
+	"scripts": {
+		"prepublishOnly": "npm run clean && npm run compile && npm test",
+		"postpublish": "node ../build/npm/post-publish.js",
+		"compile": "node ../build/bin/tsc -b ./tsconfig.json",
+		"watch": "node ../build/bin/tsc -b ./tsconfig.json -w",
+		"clean": "node ../node_modules/rimraf/bin.js lib",
+		"test": "node ../node_modules/mocha/bin/_mocha",
+		"preversion": "npm test"
+	}
+}

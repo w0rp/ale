@@ -1,0 +1,18 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"target": "es5",
+		"module": "es6",
+		"sourceMap": false,
+		"declaration": true,
+		"stripInternal": true,
+		"lib": [ "es2015" ],
+		"outDir": "lib/esm",
+		"incremental": true,
+		"tsBuildInfoFile":"./lib/tsconfig.esm.tsbuildInfo",
+		"rootDir": "src"
+	},
+	"include": [
+		"src"
+	]
+}

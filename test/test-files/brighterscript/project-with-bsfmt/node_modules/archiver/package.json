@@ -1,0 +1,61 @@
+{
+  "name": "archiver",
+  "version": "3.1.1",
+  "description": "a streaming interface for archive generation",
+  "homepage": "https://github.com/archiverjs/node-archiver",
+  "author": {
+    "name": "Chris Talkington",
+    "url": "http://christalkington.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/archiverjs/node-archiver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/archiverjs/node-archiver/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "test": "mocha --reporter dot",
+    "jsdoc": "jsdoc -c jsdoc.json README.md",
+    "bench": "node benchmark/simple/pack-zip.js"
+  },
+  "dependencies": {
+    "archiver-utils": "^2.1.0",
+    "async": "^2.6.3",
+    "buffer-crc32": "^0.2.1",
+    "glob": "^7.1.4",
+    "readable-stream": "^3.4.0",
+    "tar-stream": "^2.1.0",
+    "zip-stream": "^2.1.2"
+  },
+  "devDependencies": {
+    "archiver-jsdoc-theme": "^1.1.1",
+    "chai": "^4.2.0",
+    "jsdoc": "^3.6.3",
+    "mkdirp": "^0.5.0",
+    "mocha": "^6.2.0",
+    "rimraf": "^2.6.3",
+    "stream-bench": "^0.1.2",
+    "tar": "^4.4.10",
+    "yauzl": "^2.9.0"
+  },
+  "keywords": [
+    "archive",
+    "archiver",
+    "stream",
+    "zip",
+    "tar"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

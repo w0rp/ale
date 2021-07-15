@@ -211,6 +211,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['php'],
 \       'description': 'Fix PHP files with php-cs-fixer.',
 \   },
+\   'bsfmt_fixer': {
+\       'function': 'ale#fixers#bsfmt_fixer#Fix',
+\       'suggested_filetypes': ['brs', 'bs'],
+\       'description': 'Fix BrightScript and BrightScripter with bsfmt.',
+\   },
 \   'astyle': {
 \       'function': 'ale#fixers#astyle#Fix',
 \       'suggested_filetypes': ['c', 'cpp'],

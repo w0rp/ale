@@ -1,0 +1,53 @@
+{
+  "name": "crc",
+  "version": "3.8.0",
+  "description": "Module for calculating Cyclic Redundancy Check (CRC) for Node.js and the Browser.",
+  "keywords": [
+    "crc"
+  ],
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "main": "./lib/index.js",
+  "module": "./index.js",
+  "scripts": {
+    "lint": "eslint *.js test/{,**/}*.js",
+    "test": "npm run lint && mocha test/*.test.js && ./webpack-test/test.sh",
+    "build": "rm -fr lib; babel --out-dir ./lib/es6 *.js; cd commonjs; babel --out-dir ../lib *.js",
+    "pretest": "npm run build"
+  },
+  "author": {
+    "name": "Alex Gorbatchev",
+    "url": "https://github.com/alexgorbatchev"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.4",
+    "buffer-crc32": "^0.2.13",
+    "chai": "^4.1.2",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7",
+    "seedrandom": "^2.4.3"
+  },
+  "homepage": "https://github.com/alexgorbatchev/node-crc",
+  "bugs": "https://github.com/alexgorbatchev/node-crc/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexgorbatchev/node-crc.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.1.0"
+  }
+}

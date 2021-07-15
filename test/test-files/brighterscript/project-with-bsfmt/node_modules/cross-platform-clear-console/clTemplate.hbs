@@ -1,0 +1,38 @@
+# Changelog:
+
+All notable changes in this project's [released versions](https://github.com/ahmadawais/shades-of-purple-vscode/releases) are documented in this file.
+
+[![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
+
+<br>
+
+{{#each releases}}
+
+  ![hr](https://on.ahmda.ws/t6N5/c)
+
+  <br>
+
+  {{#if href}}
+    ### [{{title}}]({{href}}) RELEASE{{#if tag}}{{/if}}
+  {{else}}
+    ### {{title}} RELEASE{{#if tag}}{{/if}}
+  {{/if}}
+
+  {{#commit-list commits heading='![img](https://on.ahmda.ws/t5AU/c)' message='NEW:'}}
+    - {{subject}} [`{{shorthash}}`]({{href}})
+  {{/commit-list}}
+
+  {{#commit-list commits heading='' message='DOC:'}}
+   - {{subject}} [`{{shorthash}}`]({{href}})
+  {{/commit-list}}
+
+  {{#commit-list commits heading='![img](https://on.ahmda.ws/t77b/c)' message='IMPROVE: '}}
+    - {{subject}} [`{{shorthash}}`]({{href}})
+  {{/commit-list}}
+
+  {{#commit-list commits heading='![img](https://on.ahmda.ws/t5Xs/c)' message='FIX: '}}
+    - {{subject}} [`{{shorthash}}`]({{href}})
+  {{/commit-list}}
+
+    <br>
+{{/each}}
