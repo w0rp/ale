@@ -2,29 +2,27 @@
 " Description: msgfmt for PO files
 
 function! ale_linters#po#msgfmt#Handle(buffer, lines) abort
-    let l:results = ale#handlers#unix#HandleAsWarning(a:buffer, a:lines)
-    let l:index = 0
+    " Example output:
+    " /tmp/vpqkkrq/1/sv.po:465: a format specification for argument '0' doesn't exist in 'msgstr'
+    let l:pattern = '^[^:]\+:\(\d\+\):\s*\(.\+\)'
+    let l:output = []
 
-    for l:item in l:results
-        if l:index > 0 && l:item.text =~? 'this is the location of the first definition'
-            let l:last_item = l:results[l:index - 1]
-
-            if l:last_item.text =~? 'duplicate message definition'
-                let l:last_item.text = 'duplicate of message at line ' . l:item.lnum
-                let l:item.text = 'first location of duplicate of message at line ' . l:last_item.lnum
-            endif
-        endif
-
-        let l:index += 1
+    for l:match in ale#util#GetMatches(a:lines, l:pattern)
+        call add(l:output, {
+        \   'lnum': l:match[1] + 0,
+        \   'text': l:match[2],
+        \   'type': 'E',
+        \})
     endfor
 
-    return l:results
+    return l:output
+
 endfunction
 
 call ale#linter#Define('po', {
 \   'name': 'msgfmt',
 \   'executable': 'msgfmt',
 \   'output_stream': 'stderr',
-\   'command': 'msgfmt --statistics --output-file=- %t',
+\   'command': 'msgfmt --check-format --output-file=- %t',
 \   'callback': 'ale_linters#po#msgfmt#Handle',
 \})
