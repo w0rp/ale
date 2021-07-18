@@ -2698,8 +2698,9 @@ documented in additional help files.
     dafny.................................|ale-dafny-dafny|
   dart....................................|ale-dart-options|
     analysis_server.......................|ale-dart-analysis_server|
-    dartanalyzer..........................|ale-dart-dartanalyzer|
+    dart-analyze..........................|ale-dart-analyze|
     dart-format...........................|ale-dart-format|
+    dartanalyzer..........................|ale-dart-dartanalyzer|
     dartfmt...............................|ale-dart-dartfmt|
   desktop.................................|ale-desktop-options|
     desktop-file-validate.................|ale-desktop-desktop-file-validate|

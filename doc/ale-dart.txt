@@ -28,35 +28,31 @@ g:ale_dart_analysis_server_executable   *g:ale_dart_analysis_server_executable*
 
 
 ===============================================================================
-dartanalyzer                                            *ale-dart-dartanalyzer*
+dart-analyze                                                 *ale-dart-analyze*
 
 Installation
 -------------------------------------------------------------------------------
 
-Install Dart via whatever means. `dartanalyzer` will be included in the SDK.
+Installing Dart should probably ensure that `dart` is in your `$PATH`.
 
-You can add the SDK to `$PATH`, as described here:
-https://www.dartlang.org/tools/sdk
+In case it is not, try to set the executable option to its absolute path. : >
+  " Set the executable path for dart to the absolute path to it.
+  let g:ale_dart_format_executable = '/usr/lib/dart/bin/dart'
+ >
 
-If you have installed Dart on Linux, you can also try the following: >
-  " Set the executable path for dartanalyzer to the absolute path to it.
-  let g:ale_dart_dartanalyzer_executable = '/usr/lib/dart/bin/dartanalyzer'
-<
-... or similarly for wherever your Dart SDK lives. This should work without
-having to modify `$PATH`.
-
-ALE can only check for problems with `dartanalyzer` with the file on disk.
-See |ale-lint-file-linters|
+Install Dart via whatever means. `dart analyze` will be included in the SDK.
 
 Options
 -------------------------------------------------------------------------------
 
-g:ale_dart_dartanalyzer_executable         *g:ale_dart_dartanalyzer_executable*
-                                           *b:ale_dart_dartanalyzer_executable*
+g:ale_dart_analyze_executable                   *g:ale_dart_analyze_executable*
+                                                *b:ale_dart_analyze_executable*
   Type: |String|
-  Default: `'dartanalyzer'`
+  Default: `'dart'`
 
-  This variable can be set to change the path to dartanalyzer.
+  This variable can be set to specify an absolute path to the
+  format executable (or to specify an alternate executable).
+
 
 ===============================================================================
 dart-format                                                   *ale-dart-format*
@@ -89,6 +85,40 @@ g:ale_dart_format_options                           *g:ale_dart_format_options*
   Default: `''`
 
   This variable can be set to pass additional options to the dart format fixer.
+
+
+
+===============================================================================
+dartanalyzer                                            *ale-dart-dartanalyzer*
+
+Installation
+-------------------------------------------------------------------------------
+
+Install Dart via whatever means. `dartanalyzer` will be included in the SDK.
+
+You can add the SDK to `$PATH`, as described here:
+https://www.dartlang.org/tools/sdk
+
+If you have installed Dart on Linux, you can also try the following: >
+  " Set the executable path for dartanalyzer to the absolute path to it.
+  let g:ale_dart_dartanalyzer_executable = '/usr/lib/dart/bin/dartanalyzer'
+<
+... or similarly for wherever your Dart SDK lives. This should work without
+having to modify `$PATH`.
+
+ALE can only check for problems with `dartanalyzer` with the file on disk.
+See |ale-lint-file-linters|
+
+Options
+-------------------------------------------------------------------------------
+
+g:ale_dart_dartanalyzer_executable         *g:ale_dart_dartanalyzer_executable*
+                                           *b:ale_dart_dartanalyzer_executable*
+  Type: |String|
+  Default: `'dartanalyzer'`
+
+  This variable can be set to change the path to dartanalyzer.
+
 
 ===============================================================================
 dartfmt                                                      *ale-dart-dartfmt*

@@ -133,6 +133,7 @@ formatting.
   * [dafny](https://rise4fun.com/Dafny) :floppy_disk:
 * Dart
   * [analysis_server](https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server)
+  * [dart-analyze](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli) :floppy_disk:
   * [dart-format](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [dartanalyzer](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli) :floppy_disk:
   * [dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
