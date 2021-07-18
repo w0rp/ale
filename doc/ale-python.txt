@@ -38,7 +38,7 @@ ALE will look for configuration files with the following filenames. >
   Pipfile.lock
   poetry.lock
   pyproject.toml
-  .tool_versions
+  .tool-versions
 <
 
 The first directory containing any of the files named above will be used.
