@@ -437,6 +437,7 @@ formatting.
   * [lintr](https://github.com/jimhester/lintr)
   * [styler](https://github.com/r-lib/styler)
 * Racket
+  * [racket-langserver](https://github.com/jeapostrophe/racket-langserver/tree/master)
   * [raco](https://docs.racket-lang.org/raco/)
 * Re:VIEW
   * [redpen](http://redpen.cc/)

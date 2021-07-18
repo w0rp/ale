@@ -428,6 +428,7 @@ Notes:
   * `lintr`
   * `styler`
 * Racket
+  * `racket-langserver`
   * `raco`
 * Re:VIEW
   * `redpen`
