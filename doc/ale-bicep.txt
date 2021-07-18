@@ -1,0 +1,19 @@
+" Author: Johan Björklund <johan.bjorklund@protonmail.ch>
+" Description: Bicep Language Server integration (https://github.com/Azure/bicep)
+
+===============================================================================
+ALE Bicep Integration                                     *ale-elixir-options*
+
+
+===============================================================================
+bicep-ls                                                  *ale-bicep-bicep-ls*
+
+Bicep Language Server (https://github.com/Azure/bicep)
+
+g:ale_bicep_bicep_ls                                    *g:ale_bicep_bicep_ls*
+                                                        *b:ale_bicep_bicep_ls*
+  Type: |String|
+  Default: `'.bicep/bicep-langserver'`
+
+  Location of the bicep language server directory. This directory must contain
+  the language server executable Bicep.LangServer.exe.

@@ -47,6 +47,8 @@ Notes:
   * `buildifier`
 * BibTeX
   * `bibclean`
+* Bicep
+  * bicep
 * Bourne Shell
   * `shell` (-n flag)
   * `shellcheck`
