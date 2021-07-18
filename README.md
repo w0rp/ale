@@ -930,6 +930,13 @@ make it look nicer.
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 ```
 
+Since vim's default uses nice unicode characters when possible, you can trick
+ale into using that default with
+
+```vim
+let g:ale_floating_window_border = repeat([''], 6)
+```
+
 <a name="faq-vim-lsp"></a>
 
 ### 5.xxii. How can I use ALE and vim-lsp together?

@@ -651,9 +651,9 @@ problem will be displayed in a balloon instead of hover information.
 Hover information can be displayed in the preview window instead by setting
 |g:ale_hover_to_preview| to `1`.
 
-When using Neovim, if |g:ale_hover_to_floating_preview| or |g:ale_floating_preview|
-is set to 1, the hover information will show in a floating window. And
-|g:ale_floating_window_border| for the border setting.
+When using Neovim or Vim with |popupwin|, if |g:ale_hover_to_floating_preview|
+or |g:ale_floating_preview| is set to 1, the hover information will show in a
+floating window. And |g:ale_floating_window_border| for the border setting.
 
 For Vim 8.1+ terminals, mouse hovering is disabled by default. Enabling
 |balloonexpr| commands in terminals can cause scrolling issues in terminals,
@@ -968,8 +968,8 @@ g:ale_detail_to_floating_preview             *g:ale_detail_to_floating_preview*
   Type: |Number|
   Default: `0`
 
-  When this option is set to `1`, Neovim will use a floating window for
-  ALEDetail output.
+  When this option is set to `1`, Neovim or Vim with |popupwin| will use a
+  floating window for ALEDetail output.
 
 
 g:ale_disable_lsp                                           *g:ale_disable_lsp*
@@ -1200,7 +1200,8 @@ g:ale_floating_preview                                 *g:ale_floating_preview*
   Type: |Number|
   Default: `0`
 
-  When set to `1`, Neovim will use a floating window for ale's preview window.
+  When set to `1`, Neovim or Vim with |popupwin| will use a floating window
+  for ale's preview window.
   This is equivalent to setting |g:ale_hover_to_floating_preview| and
   |g:ale_detail_to_floating_preview| to `1`.
 
@@ -1281,7 +1282,8 @@ g:ale_hover_to_floating_preview               *g:ale_hover_to_floating_preview*
   Type: |Number|
   Default: `0`
 
-  If set to `1`, Neovim will use floating windows for hover messages.
+  If set to `1`, Neovim or Vim with |popupwin| will use floating windows for
+  hover messages.
 
 
 g:ale_keep_list_window_open                       *g:ale_keep_list_window_open*
