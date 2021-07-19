@@ -1,8 +1,7 @@
-" Author: Mohammed Chelouti - https://github.com/motato1
-"         Arnold Chand <creativenull@outlook.com>
-" Description: Deno lsp linter for TypeScript files.
+" Author: Arnold Chand <creativenull@outlook.com>
+" Description: Deno LSP for JavaScript projects
 
-call ale#linter#Define('typescript', {
+call ale#linter#Define('javascript', {
 \   'name': 'deno',
 \   'lsp': 'stdio',
 \   'executable': function('ale#handlers#deno#GetExecutable'),
